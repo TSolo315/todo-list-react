@@ -8,6 +8,11 @@ function TodoList() {
   const [todoListEntries, setTodoListEntries] = useState([]);
   const todoListState = {todoListEntries: todoListEntries, setTodoListEntries: setTodoListEntries}
 
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos") || "[]");
+    setTodoListEntries(todos)
+  }, [])
+
 
   return (
     <div>

@@ -1,5 +1,5 @@
 .inline-todo-button {
-  margin-right: 1em;
+  margin-left: 1em;
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -12,4 +12,50 @@
 
 .inline-todo-button.delete {
   background-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.inline-text_copy--active,
+
+.inline-text_input--active {
+
+  font: inherit;
+
+  color: inherit;
+
+  text-align: inherit;
+
+  padding: 0;
+
+  background: none;
+
+  border: none;
+
+  border-bottom: 1px dashed #666666;
+
+}
+
+.inline-text_copy--active {
+
+  cursor: pointer;
+
+}
+
+.inline-text_copy--hidden,
+
+.inline-text_input--hidden {
+
+  display: none;
+
+}
+
+.inline-text_input--active {
+
+  border-bottom: 1px solid #666666;
+
+  text-align: left;
+
 }

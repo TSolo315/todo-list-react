@@ -1,4 +1,4 @@
-import React , { useState, useEffect} from 'react';
+import React from 'react';
 
 function TodoInput(props) {
 
@@ -9,9 +9,12 @@ function TodoInput(props) {
     const todoEntry = {id: id,
                        entry: todoEntryText,
                        completed: false}
-    let newTodoList = JSON.parse(JSON.stringify(props.todoList.todoListEntries));
+    const newTodoList = JSON.parse(JSON.stringify(props.todoList.todoListEntries));
     newTodoList.push(todoEntry)
     props.todoList.setTodoListEntries(newTodoList)
+    localStorage.setItem("todos", JSON.stringify(newTodoList));
+    event.target.elements.todoEntry.value = ''
+    event.target.elements.todoEntry.focus()
   }
 
   return(
