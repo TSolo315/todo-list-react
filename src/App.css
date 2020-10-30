@@ -1,3 +1,26 @@
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item-list {
+  min-width: 65%;
+  list-style: none;
+  border: 2px solid black;
+  margin: 1.5em;
+  padding: 2em;
+}
+
+.todo-item-list li {
+  margin: .5em 0 .5em 0
+}
+
+.todo-item-list li span input {
+  padding-left: .5em;
+}
+
 .inline-todo-button {
   margin-left: 1em;
   background-color: #4CAF50; /* Green */

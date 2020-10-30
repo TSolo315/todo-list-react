@@ -6,7 +6,7 @@ function TodoItemList(props) {
     <TodoItem key={todo.id} id={todo.id} entry={todo.entry} completed={todo.completed} todoList={props.todoList}/>
   );
   return (
-    <ul>
+    <ul className="todo-item-list">
       {todoList}
     </ul>
   );
