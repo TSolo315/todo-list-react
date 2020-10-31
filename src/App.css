@@ -1,3 +1,5 @@
+@import 'BootstrapSpacing.css';
+
 .todo-list-container {
   display: flex;
   flex-direction: column;
@@ -14,23 +16,37 @@
 }
 
 .todo-item-list li {
-  margin: .5em 0 .5em 0
+  display: flex;
+  justify-content: space-between;
+  margin-top: .6em;
+  padding: .25em .25em .25em .25em;
+  background-color: lightgray;
+  border: 1px double black
 }
 
-.todo-item-list li span input {
-  padding-left: .5em;
+.todo-item-list span.inline-text {
+  color: darkcyan;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
+
+.todo-item-list li.completed {
+  background-color: lightgreen;
+}
+
+/* .todo-item-list li span input {
+  padding-left: .1em;
+} */
 
 .inline-todo-button {
-  margin-left: 1em;
-  background-color: #4CAF50; /* Green */
+  display: inline-block;
+  text-align: center;
   border: none;
   color: white;
   padding: 13px 26px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .inline-todo-button.delete {
