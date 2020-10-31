@@ -98,7 +98,7 @@ function InlineEdit(props) {
 
         // it's not quite right but gets it close
 
-        style={{ width: Math.ceil(inputValue.length * 0.97) + "ex" }}
+        style={{ width: Math.ceil(inputValue.length * 0.9) + "ex" }}
 
         value={inputValue}
 

@@ -5,6 +5,9 @@ function TodoInput(props) {
   function handleSubmit(event) {
     event.preventDefault()
     const todoEntryText = event.target.elements.todoEntry.value
+    if (!todoEntryText) {
+      return
+    }
     const id = Date.now() + '' + Math.random()
     const todoEntry = {id: id,
                        entry: todoEntryText,

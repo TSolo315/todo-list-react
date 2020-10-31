@@ -4,8 +4,8 @@ function Heading(props) {
 
   return(
     <div>
-      <h1>{props.title}</h1>
-      <h4>{props.subtitle}</h4>
+      <h1 className='Title'>{props.title}</h1>
+      <h3 className='subTitle'>{props.subtitle}</h3>
     </div>
   );
 }
