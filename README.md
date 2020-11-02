@@ -1,4 +1,4 @@
-# *To-do List React*
+# *Todo List React*
 
 A simple to-do list application created using react.js.
 
