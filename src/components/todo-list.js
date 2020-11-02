@@ -16,7 +16,7 @@ function TodoList() {
 
   return (
     <div className="todo-list-container">
-      <Heading title="Todo List" subtitle="Organize your life."/>
+      <Heading title="Todo List" subtitle="Get your life in order."/>
       <TodoInput todoList={todoListState}/>
       <TodoItemList todoList={todoListState} />
     </div>

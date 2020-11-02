@@ -1,16 +1,18 @@
 @import 'BootstrapSpacing.css';
 
 .title {
-  font-size: 2em;
+  font-size: 3em;
+  font-family:  Georgia, 'Times New Roman', Times, serif, Tahoma, sans-serif, Times, serif;
 }
 
 .subTitle {
   color: rgb(61, 68, 75);
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 600;
   line-height: 0;
-  margin-left: -.25em;
   margin-bottom: 2em;
+  margin-top: -.25em;
+  font-family: Helvetica, Arial, sans-serif
 }
 
 .todo-list-container {
