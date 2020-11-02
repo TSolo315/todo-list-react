@@ -59,7 +59,7 @@
 .todo-item-list span.inline-text {
   color: #11998e;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   padding: .5em;
 }
 
@@ -163,11 +163,6 @@
   width: 50%;
 }
 
-@media only screen and (min-width : 768px) {
-  .form__group {
-    width: 40%;
-  }
-}
 
 .form__field {
   font-family: inherit;
@@ -239,4 +234,15 @@ strong.empty-list {
 
 .todo-submit:hover {
   background-color:#0d6b63;
+}
+
+@media only screen and (min-width : 768px) {
+  .form__group {
+    width: 40%;
+  }
+
+  .todo-item-list span.inline-text {
+    font-size: 24px;
+  }
+
 }
