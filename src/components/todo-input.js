@@ -21,10 +21,10 @@ function TodoInput(props) {
   }
 
   return(
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="todoEntry">New Todo:</label>
-        <input type="text" name="todoEntry" />
-      <input type="submit" value="Submit" />
+    <form onSubmit={handleSubmit} className="form__group field">
+        <input type="text" name="todoEntry" placeholder="New Todo" className="form__field" required />
+        <label htmlFor="todoEntry" className="form__label">New Todo:</label>
+      <input type="submit" value="Submit" className="todo-submit" />
     </form>
   );
 }

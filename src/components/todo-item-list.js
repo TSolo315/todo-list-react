@@ -60,7 +60,7 @@ function TodoItemList(props) {
     return (
       <div className="todo-item-list">
         <ul>
-          <p><strong>You have no items in your todo list!</strong></p>
+          <p><strong className="empty-list">You have no items in your todo list!</strong></p>
         </ul>
       </div>
     );
