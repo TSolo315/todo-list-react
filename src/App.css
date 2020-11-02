@@ -43,7 +43,8 @@
   margin-top: .6em;
   padding: .25em .25em .25em .25em;
   background-color: lightgray;
-  border: 1px double black
+  border: 1px double black;
+  overflow: hidden;
 }
 
 .todo-item-list-heading {
@@ -128,6 +129,7 @@
   border: none;
 
   border-bottom: 1px dashed #666666;
+
 
 }
 
@@ -220,7 +222,7 @@
 }
 
 strong.empty-list {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .todo-submit {
