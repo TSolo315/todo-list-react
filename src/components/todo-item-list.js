@@ -4,8 +4,32 @@ import TodoItem from './todo-item.js'
 function TodoItemListHeadingBar(props) {
 
   function toggleTodos() {
-    console.log('toggled')
+    let check = false
+    const newTodoList = JSON.parse(JSON.stringify(props.todoList.todoListEntries));
+    for (let todo of props.todoList.todoListEntries) {
+      if (!todo.completed) {
+        check = true
+        break
+      }
+    }
+    if (check) {
+      for (let todo of newTodoList) {
+        todo.completed = true
+      }
+    } else {
+      for (let todo of newTodoList) {
+        todo.completed = false
+      }
+    }
+    localStorage.setItem("todos", JSON.stringify(newTodoList));
+    props.todoList.setTodoListEntries(newTodoList)
   }
+
+  function deleteAllTodos() {
+    localStorage.setItem("todos", []);
+    props.todoList.setTodoListEntries([])
+  }
+
   return (
     <div className="todo-item-list-heading">
       <div className="mx-3">
@@ -13,7 +37,7 @@ function TodoItemListHeadingBar(props) {
         <label className="mx-1">Toggle All</label>
       </div>
       <h2>Things To Do</h2>
-      <button className="ghost-button delete ml-3">Delete All</button>
+      <button className="ghost-button delete ml-3" onClick={deleteAllTodos} >Delete All</button>
     </div>
   )
 }
@@ -26,7 +50,7 @@ function TodoItemList(props) {
   if (todoList.length > 0) {
     return (
       <div className="todo-item-list">
-        <TodoItemListHeadingBar />
+        <TodoItemListHeadingBar todoList={props.todoList} />
         <ul>
           {todoList}
         </ul>

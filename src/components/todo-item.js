@@ -31,7 +31,7 @@ function TodoItem(props) {
 
   return(
     <li className={`${props.completed ? "completed" : ""}`}>
-      <input className="mx-3" type="checkbox" id="todoComplete" name="todoComplete" value="Completed" defaultChecked={props.completed} onClick={handleCompleteTask} />
+      <input className="mx-3" type="checkbox" id="todoComplete" name="todoComplete" value="Completed" checked={props.completed} onClick={handleCompleteTask} />
       <InlineEdit text={props.entry} onSetText={handleEdit}/>
       <a className="todo-delete-button" onClick={handleDelete}><img src={deleteIcon}></img></a>
     </li>
